@@ -46,7 +46,8 @@ str(ciudad)
 
 ```{r pais_andes, echo=TRUE}
 
-pais_andes <- as.character(c('Argentina', 'Bolivia', 'Chile', 'Colombia', 'Ecuador', 'Perú', 'Venezuela'))
+pais_andes <- as.character(c('Argentina', 'Bolivia', 'Chile', 'Colombia', 
+                             'Ecuador', 'Perú', 'Venezuela'))
 
 str(pais_andes)
 ```
@@ -56,15 +57,20 @@ str(pais_andes)
 
 ## Generar los vectores para cada tipo de valores
 
-Nombres <- as.character(c('Angelica Pérez', 'Pablo Jurado', 'Tomas Aguirre', 'Katty López', 'Mateo Sevilla', 'Pepe Castillo', 'Veronica Torres', 'Sonia Castro', 'Eloisa Escobar', 'Marcelo Jurado', 'Josue Yanez', 'Ana Soria'))
+Nombres <- as.character(c('Angelica Pérez', 'Pablo Jurado', 'Tomas Aguirre', 
+                          'Katty López', 'Mateo Sevilla', 'Pepe Castillo', 
+                          'Veronica Torres', 'Sonia Castro', 'Eloisa Escobar', 
+                          'Marcelo Jurado', 'Josue Yanez', 'Ana Soria'))
 
 Edad <- as.integer(c(20, 30, 14, 18, 59, 21, 15, 17, 38, 40, 14, 15))
 
-Altura_metros <- as.double(c(1.59, 1.70, 1.60, 1.75, 1.74, 1.54, 1.80, 1.54, 1.75, 1.57, 1.87, 1.65))
+Altura_metros <- as.double(c(1.59, 1.70, 1.60, 1.75, 1.74, 1.54, 1.80, 
+                             1.54, 1.75, 1.57, 1.87, 1.65))
 
 Peso_Kg <- as.integer(c(56, 70, 67, 60, 65, 60, 84, 79, 89, 62, 90, 69))
 
-Seguro_Medico <- (c(TRUE, FALSE, TRUE, FALSE, TRUE, FALSE, TRUE, FALSE, FALSE, FALSE, TRUE, TRUE))
+Seguro_Medico <- (c(TRUE, FALSE, TRUE, FALSE, TRUE, FALSE, TRUE, FALSE, FALSE, 
+                    FALSE, TRUE, TRUE))
 
 
 ### Generación de dataframe:

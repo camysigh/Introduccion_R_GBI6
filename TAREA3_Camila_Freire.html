@@ -1620,9 +1620,10 @@ nombre de alguna ciudad</h4>
 <h4>2. Crear un identificador de nombre “pais_andes” y asigne como valor
 los nombres de los países por donde cruza la cordillera de Los
 Andes</h4>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>pais_andes <span class="ot">&lt;-</span> <span class="fu">as.character</span>(<span class="fu">c</span>(<span class="st">&#39;Argentina&#39;</span>, <span class="st">&#39;Bolivia&#39;</span>, <span class="st">&#39;Chile&#39;</span>, <span class="st">&#39;Colombia&#39;</span>, <span class="st">&#39;Ecuador&#39;</span>, <span class="st">&#39;Perú&#39;</span>, <span class="st">&#39;Venezuela&#39;</span>))</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(pais_andes)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>pais_andes <span class="ot">&lt;-</span> <span class="fu">as.character</span>(<span class="fu">c</span>(<span class="st">&#39;Argentina&#39;</span>, <span class="st">&#39;Bolivia&#39;</span>, <span class="st">&#39;Chile&#39;</span>, <span class="st">&#39;Colombia&#39;</span>, </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>                             <span class="st">&#39;Ecuador&#39;</span>, <span class="st">&#39;Perú&#39;</span>, <span class="st">&#39;Venezuela&#39;</span>))</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(pais_andes)</span></code></pre></div>
 <pre><code>##  chr [1:7] &quot;Argentina&quot; &quot;Bolivia&quot; &quot;Chile&quot; &quot;Colombia&quot; &quot;Ecuador&quot; &quot;Perú&quot; ...</code></pre>
 </div>
 <div id="crear-un-dataframe-con-12-eventos-files-y-5-variables-columnas-cada-columna-debe-tener-diferentes-tipos-de-datos-entero-decimal-caracter-logico" class="section level4">
@@ -1631,26 +1632,31 @@ Andes</h4>
 decimal, caracter, logico)</h4>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Generar los vectores para cada tipo de valores</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>Nombres <span class="ot">&lt;-</span> <span class="fu">as.character</span>(<span class="fu">c</span>(<span class="st">&#39;Angelica Pérez&#39;</span>, <span class="st">&#39;Pablo Jurado&#39;</span>, <span class="st">&#39;Tomas Aguirre&#39;</span>, <span class="st">&#39;Katty López&#39;</span>, <span class="st">&#39;Mateo Sevilla&#39;</span>, <span class="st">&#39;Pepe Castillo&#39;</span>, <span class="st">&#39;Veronica Torres&#39;</span>, <span class="st">&#39;Sonia Castro&#39;</span>, <span class="st">&#39;Eloisa Escobar&#39;</span>, <span class="st">&#39;Marcelo Jurado&#39;</span>, <span class="st">&#39;Josue Yanez&#39;</span>, <span class="st">&#39;Ana Soria&#39;</span>))</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>Edad <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(<span class="fu">c</span>(<span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">14</span>, <span class="dv">18</span>, <span class="dv">59</span>, <span class="dv">21</span>, <span class="dv">15</span>, <span class="dv">17</span>, <span class="dv">38</span>, <span class="dv">40</span>, <span class="dv">14</span>, <span class="dv">15</span>))</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>Altura_metros <span class="ot">&lt;-</span> <span class="fu">as.double</span>(<span class="fu">c</span>(<span class="fl">1.59</span>, <span class="fl">1.70</span>, <span class="fl">1.60</span>, <span class="fl">1.75</span>, <span class="fl">1.74</span>, <span class="fl">1.54</span>, <span class="fl">1.80</span>, <span class="fl">1.54</span>, <span class="fl">1.75</span>, <span class="fl">1.57</span>, <span class="fl">1.87</span>, <span class="fl">1.65</span>))</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>Peso_Kg <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(<span class="fu">c</span>(<span class="dv">56</span>, <span class="dv">70</span>, <span class="dv">67</span>, <span class="dv">60</span>, <span class="dv">65</span>, <span class="dv">60</span>, <span class="dv">84</span>, <span class="dv">79</span>, <span class="dv">89</span>, <span class="dv">62</span>, <span class="dv">90</span>, <span class="dv">69</span>))</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>Seguro_Medico <span class="ot">&lt;-</span> (<span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">FALSE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">TRUE</span>))</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>Nombres <span class="ot">&lt;-</span> <span class="fu">as.character</span>(<span class="fu">c</span>(<span class="st">&#39;Angelica Pérez&#39;</span>, <span class="st">&#39;Pablo Jurado&#39;</span>, <span class="st">&#39;Tomas Aguirre&#39;</span>, </span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>                          <span class="st">&#39;Katty López&#39;</span>, <span class="st">&#39;Mateo Sevilla&#39;</span>, <span class="st">&#39;Pepe Castillo&#39;</span>, </span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>                          <span class="st">&#39;Veronica Torres&#39;</span>, <span class="st">&#39;Sonia Castro&#39;</span>, <span class="st">&#39;Eloisa Escobar&#39;</span>, </span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>                          <span class="st">&#39;Marcelo Jurado&#39;</span>, <span class="st">&#39;Josue Yanez&#39;</span>, <span class="st">&#39;Ana Soria&#39;</span>))</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>Edad <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(<span class="fu">c</span>(<span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">14</span>, <span class="dv">18</span>, <span class="dv">59</span>, <span class="dv">21</span>, <span class="dv">15</span>, <span class="dv">17</span>, <span class="dv">38</span>, <span class="dv">40</span>, <span class="dv">14</span>, <span class="dv">15</span>))</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>Altura_metros <span class="ot">&lt;-</span> <span class="fu">as.double</span>(<span class="fu">c</span>(<span class="fl">1.59</span>, <span class="fl">1.70</span>, <span class="fl">1.60</span>, <span class="fl">1.75</span>, <span class="fl">1.74</span>, <span class="fl">1.54</span>, <span class="fl">1.80</span>, </span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>                             <span class="fl">1.54</span>, <span class="fl">1.75</span>, <span class="fl">1.57</span>, <span class="fl">1.87</span>, <span class="fl">1.65</span>))</span>
 <span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="do">### Generación de dataframe:</span></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>Ficha_medica <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(Nombres,</span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>                           Edad,</span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>                           Altura_metros,</span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>                           Peso_Kg,</span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>                           Seguro_Medico)</span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>Ficha_medica</span></code></pre></div>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>Peso_Kg <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(<span class="fu">c</span>(<span class="dv">56</span>, <span class="dv">70</span>, <span class="dv">67</span>, <span class="dv">60</span>, <span class="dv">65</span>, <span class="dv">60</span>, <span class="dv">84</span>, <span class="dv">79</span>, <span class="dv">89</span>, <span class="dv">62</span>, <span class="dv">90</span>, <span class="dv">69</span>))</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>Seguro_Medico <span class="ot">&lt;-</span> (<span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">FALSE</span>, </span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>                    <span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">TRUE</span>))</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="do">### Generación de dataframe:</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>Ficha_medica <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(Nombres,</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>                           Edad,</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>                           Altura_metros,</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>                           Peso_Kg,</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>                           Seguro_Medico)</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>Ficha_medica</span></code></pre></div>
 <pre><code>##            Nombres Edad Altura_metros Peso_Kg Seguro_Medico
 ## 1   Angelica Pérez   20          1.59      56          TRUE
 ## 2     Pablo Jurado   30          1.70      70         FALSE
