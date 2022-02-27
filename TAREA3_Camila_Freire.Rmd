@@ -12,9 +12,9 @@ output:
     theme: journal
     highlight: zenburn
     toc: yes
-    toc_depth: 3
+    toc_depth: 4
     toc_float:
-      collapsed: no
+      collapsed: true
       smooth_scroll: yes
 ---
 
