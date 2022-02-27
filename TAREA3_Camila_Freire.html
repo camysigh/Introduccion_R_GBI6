@@ -1623,6 +1623,41 @@ Andes</h4>
 <h4>Crear un dataframe con 12 eventos (files) y 5 variables (columnas),
 cada columna debe tener diferentes tipos de datos (entero, decimal,
 caracter, logico)</h4>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Generar los vectores para cada tipo de valores</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>Nombres <span class="ot">&lt;-</span> <span class="fu">as.character</span>(<span class="fu">c</span>(<span class="st">&#39;Angelica Pérez&#39;</span>, <span class="st">&#39;Pablo Jurado&#39;</span>, <span class="st">&#39;Tomas Aguirre&#39;</span>, <span class="st">&#39;Katty López&#39;</span>, <span class="st">&#39;Mateo Sevilla&#39;</span>, <span class="st">&#39;Pepe Castillo&#39;</span>, <span class="st">&#39;Veronica Torres&#39;</span>, <span class="st">&#39;Sonia Castro&#39;</span>, <span class="st">&#39;Eloisa Escobar&#39;</span>, <span class="st">&#39;Marcelo Jurado&#39;</span>, <span class="st">&#39;Josue Yanez&#39;</span>, <span class="st">&#39;Ana Soria&#39;</span>))</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>Edad <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(<span class="fu">c</span>(<span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">14</span>, <span class="dv">18</span>, <span class="dv">59</span>, <span class="dv">21</span>, <span class="dv">15</span>, <span class="dv">17</span>, <span class="dv">38</span>, <span class="dv">40</span>, <span class="dv">14</span>, <span class="dv">15</span>))</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>Altura_metros <span class="ot">&lt;-</span> <span class="fu">as.double</span>(<span class="fu">c</span>(<span class="fl">1.59</span>, <span class="fl">1.70</span>, <span class="fl">1.60</span>, <span class="fl">1.75</span>, <span class="fl">1.74</span>, <span class="fl">1.54</span>, <span class="fl">1.80</span>, <span class="fl">1.54</span>, <span class="fl">1.75</span>, <span class="fl">1.57</span>, <span class="fl">1.87</span>, <span class="fl">1.65</span>))</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>Peso_Kg <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(<span class="fu">c</span>(<span class="dv">56</span>, <span class="dv">70</span>, <span class="dv">67</span>, <span class="dv">60</span>, <span class="dv">65</span>, <span class="dv">60</span>, <span class="dv">84</span>, <span class="dv">79</span>, <span class="dv">89</span>, <span class="dv">62</span>, <span class="dv">90</span>, <span class="dv">69</span>))</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>Seguro_Medico <span class="ot">&lt;-</span> (<span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">FALSE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">TRUE</span>))</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="do">### Generación de dataframe:</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>Ficha_medica <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(Nombres,</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>                           Edad,</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>                           Altura_metros,</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>                           Peso_Kg,</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>                           Seguro_Medico)</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>Ficha_medica</span></code></pre></div>
+<pre><code>##            Nombres Edad Altura_metros Peso_Kg Seguro_Medico
+## 1   Angelica Pérez   20          1.59      56          TRUE
+## 2     Pablo Jurado   30          1.70      70         FALSE
+## 3    Tomas Aguirre   14          1.60      67          TRUE
+## 4      Katty López   18          1.75      60         FALSE
+## 5    Mateo Sevilla   59          1.74      65          TRUE
+## 6    Pepe Castillo   21          1.54      60         FALSE
+## 7  Veronica Torres   15          1.80      84          TRUE
+## 8     Sonia Castro   17          1.54      79         FALSE
+## 9   Eloisa Escobar   38          1.75      89         FALSE
+## 10  Marcelo Jurado   40          1.57      62         FALSE
+## 11     Josue Yanez   14          1.87      90          TRUE
+## 12       Ana Soria   15          1.65      69          TRUE</code></pre>
 </div>
 <div id="cargue-el-dataset-dnase-e-identifique-su-estructura.-extraiga-subset-los-datos-que-cumplan-con-las-condiciones-de" class="section level4">
 <h4>Cargue el dataset “DNase” e identifique su estructura. Extraiga
