@@ -13,7 +13,7 @@
 
 <meta name="date" content="2022-02-26" />
 
-<title>Untitled</title>
+<title>Universidad Regional Amazónica Ikiam</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -1589,21 +1589,33 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Untitled</h1>
+<h1 class="title toc-ignore">Universidad Regional Amazónica Ikiam</h1>
+<h3 class="subtitle">TAREA 3 - Introducción a R</h3>
 <h4 class="author">Camila Freire</h4>
 <h4 class="date">2022-02-26</h4>
 
 </div>
 
 
-<div id="tarea-2" class="section level1">
-<h1>TAREA 2</h1>
-<div id="bioinformática-grupo1" class="section level2">
-<h2>Bioinformática Grupo1</h2>
-<div id="camila-freire-26-02-2022" class="section level3">
-<h3>Camila Freire, 26-02-2022</h3>
+<div id="introducción" class="section level3">
+<h3>Introducción:</h3>
+<p>Realice la tarea de creación de datos basado en la clase de <a href="https://youtu.be/ZVbRXgdJze4">Introduccion a R</a>, revise la
+carpeta del <a href="https://drive.google.com/drive/folders/1ay_YTx9aO5j2jbxcgE9osjbApIEDZI-z?usp=sharing">2021II_4.1
+INTRODUCCIÓN A R.</a> En la actividad se requiere:</p>
+<ol style="list-style-type: decimal">
+<li>Generar un archivo HTML (self-contained: true) a partir de un
+documentoR markdown.<br />
+</li>
+<li>Guardar ambos archivos (<em>Html y Rmd</em>) en un repositorio de
+GitHub con el nombre <strong>“IntroduccionR”</strong>.</li>
+<li>Utilizar el control de la versión (<strong>al menos 3
+commits</strong>)</li>
+</ol>
+</div>
+<div id="desarrollo-de-ejercicio" class="section level3">
+<h3>Desarrollo de ejercicio:</h3>
 <div id="crear-un-identificador-de-nombre-ciudad-y-asigne-como-valor-el-nombre-de-alguna-ciudad" class="section level4">
-<h4>Crear un identificador de nombre “ciudad” y asigne como valor el
+<h4>1. Crear un identificador de nombre “ciudad” y asigne como valor el
 nombre de alguna ciudad</h4>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>ciudad <span class="ot">&lt;-</span> <span class="fu">as.character</span>(<span class="st">&#39;Ambato&#39;</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -1611,7 +1623,7 @@ nombre de alguna ciudad</h4>
 <pre><code>##  chr &quot;Ambato&quot;</code></pre>
 </div>
 <div id="crear-un-identificador-de-nombre-pais_andes-y-asigne-como-valor-los-nombres-de-los-países-por-donde-cruza-la-cordillera-de-los-andes" class="section level4">
-<h4>Crear un identificador de nombre “pais_andes” y asigne como valor
+<h4>2. Crear un identificador de nombre “pais_andes” y asigne como valor
 los nombres de los países por donde cruza la cordillera de Los
 Andes</h4>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>pais_andes <span class="ot">&lt;-</span> <span class="fu">as.character</span>(<span class="fu">c</span>(<span class="st">&#39;Argentina&#39;</span>, <span class="st">&#39;Bolivia&#39;</span>, <span class="st">&#39;Chile&#39;</span>, <span class="st">&#39;Colombia&#39;</span>, <span class="st">&#39;Ecuador&#39;</span>, <span class="st">&#39;Perú&#39;</span>, <span class="st">&#39;Venezuela&#39;</span>))</span>
@@ -1620,9 +1632,9 @@ Andes</h4>
 <pre><code>##  chr [1:7] &quot;Argentina&quot; &quot;Bolivia&quot; &quot;Chile&quot; &quot;Colombia&quot; &quot;Ecuador&quot; &quot;Perú&quot; ...</code></pre>
 </div>
 <div id="crear-un-dataframe-con-12-eventos-files-y-5-variables-columnas-cada-columna-debe-tener-diferentes-tipos-de-datos-entero-decimal-caracter-logico" class="section level4">
-<h4>Crear un dataframe con 12 eventos (files) y 5 variables (columnas),
-cada columna debe tener diferentes tipos de datos (entero, decimal,
-caracter, logico)</h4>
+<h4>3. Crear un dataframe con 12 eventos (files) y 5 variables
+(columnas), cada columna debe tener diferentes tipos de datos (entero,
+decimal, caracter, logico)</h4>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Generar los vectores para cada tipo de valores</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>Nombres <span class="ot">&lt;-</span> <span class="fu">as.character</span>(<span class="fu">c</span>(<span class="st">&#39;Angelica Pérez&#39;</span>, <span class="st">&#39;Pablo Jurado&#39;</span>, <span class="st">&#39;Tomas Aguirre&#39;</span>, <span class="st">&#39;Katty López&#39;</span>, <span class="st">&#39;Mateo Sevilla&#39;</span>, <span class="st">&#39;Pepe Castillo&#39;</span>, <span class="st">&#39;Veronica Torres&#39;</span>, <span class="st">&#39;Sonia Castro&#39;</span>, <span class="st">&#39;Eloisa Escobar&#39;</span>, <span class="st">&#39;Marcelo Jurado&#39;</span>, <span class="st">&#39;Josue Yanez&#39;</span>, <span class="st">&#39;Ana Soria&#39;</span>))</span>
@@ -1660,7 +1672,7 @@ caracter, logico)</h4>
 ## 12       Ana Soria   15          1.65      69          TRUE</code></pre>
 </div>
 <div id="cargue-el-dataset-dnase-e-identifique-su-estructura.-extraiga-subset-los-datos-que-cumplan-con-las-condiciones-de" class="section level4">
-<h4>Cargue el dataset “DNase” e identifique su estructura. Extraiga
+<h4>4. Cargue el dataset “DNase” e identifique su estructura. Extraiga
 (subset) los datos que cumplan con las condiciones de:</h4>
 <ol style="list-style-type: decimal">
 <li>“conc” (concentracion) entre 0.1 y 0.2</li>
@@ -1694,8 +1706,6 @@ caracter, logico)</h4>
 <pre><code>##   Run     conc density
 ## 5   1 0.390625   0.206
 ## 6   1 0.390625   0.215</code></pre>
-</div>
-</div>
 </div>
 </div>
 
