@@ -20,6 +20,7 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
 ```
 
 ### Introducción:
@@ -83,18 +84,19 @@ Ficha_medica
 2. "Run" diferente a 2, "conc" mayor a 0.2 y "density" menor o igual a 1.0
 
 ```{r dataset, echo=TRUE}
-data()
+# Se carga la dataset 'DNase'
+data(DNase)
+?DNase
 
-# Selección del dataset "DNase"
-DNasa <- head(DNase)
-
-DNasa
+head(DNase)
 
 ```
+
+
 ```{r concentración, echo=TRUE}
 ### Extracción de datos, 1. "conc" (concentracion) entre 0.1 y 0.2
 
-concentracion <- subset(DNasa, conc <=0.2 & conc >= 0.1)
+concentracion <- subset(DNase, conc <=0.2 & conc >= 0.1)
 concentracion
 ```
 
@@ -102,7 +104,7 @@ concentracion
 ```{r extracto, echo=TRUE}
 ### "Run" diferente a 2, "conc" mayor a 0.2 y "density" menor o igual a 1.0
 
-Extracted <- subset(DNasa, Run != 2 & conc >0.2 & density<=1.0)
+Extracted <- subset(DNase, Run != 2 & conc >0.2 & density<=1.0)
 Extracted
 ```
 

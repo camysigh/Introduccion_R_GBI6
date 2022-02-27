@@ -1679,12 +1679,11 @@ decimal, caracter, logico)</h4>
 <li>“Run” diferente a 2, “conc” mayor a 0.2 y “density” menor o igual a
 1.0</li>
 </ol>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>()</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Selección del dataset &quot;DNase&quot;</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>DNasa <span class="ot">&lt;-</span> <span class="fu">head</span>(DNase)</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>DNasa</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Se carga la dataset &#39;DNase&#39;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(DNase)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>?DNase</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(DNase)</span></code></pre></div>
 <pre><code>##   Run       conc density
 ## 1   1 0.04882812   0.017
 ## 2   1 0.04882812   0.018
@@ -1694,18 +1693,100 @@ decimal, caracter, logico)</h4>
 ## 6   1 0.39062500   0.215</code></pre>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="do">### Extracción de datos, 1. &quot;conc&quot; (concentracion) entre 0.1 y 0.2</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>concentracion <span class="ot">&lt;-</span> <span class="fu">subset</span>(DNasa, conc <span class="sc">&lt;=</span><span class="fl">0.2</span> <span class="sc">&amp;</span> conc <span class="sc">&gt;=</span> <span class="fl">0.1</span>)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>concentracion <span class="ot">&lt;-</span> <span class="fu">subset</span>(DNase, conc <span class="sc">&lt;=</span><span class="fl">0.2</span> <span class="sc">&amp;</span> conc <span class="sc">&gt;=</span> <span class="fl">0.1</span>)</span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>concentracion</span></code></pre></div>
-<pre><code>##   Run      conc density
-## 3   1 0.1953125   0.121
-## 4   1 0.1953125   0.124</code></pre>
+<pre><code>##     Run      conc density
+## 3     1 0.1953125   0.121
+## 4     1 0.1953125   0.124
+## 19    2 0.1953125   0.137
+## 20    2 0.1953125   0.123
+## 35    3 0.1953125   0.173
+## 36    3 0.1953125   0.165
+## 51    4 0.1953125   0.118
+## 52    4 0.1953125   0.108
+## 67    5 0.1953125   0.132
+## 68    5 0.1953125   0.135
+## 83    6 0.1953125   0.191
+## 84    6 0.1953125   0.189
+## 99    7 0.1953125   0.182
+## 100   7 0.1953125   0.182
+## 115   8 0.1953125   0.152
+## 116   8 0.1953125   0.148
+## 131   9 0.1953125   0.142
+## 132   9 0.1953125   0.155
+## 147  10 0.1953125   0.164
+## 148  10 0.1953125   0.166
+## 163  11 0.1953125   0.159
+## 164  11 0.1953125   0.155</code></pre>
 <div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="do">### &quot;Run&quot; diferente a 2, &quot;conc&quot; mayor a 0.2 y &quot;density&quot; menor o igual a 1.0</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>Extracted <span class="ot">&lt;-</span> <span class="fu">subset</span>(DNasa, Run <span class="sc">!=</span> <span class="dv">2</span> <span class="sc">&amp;</span> conc <span class="sc">&gt;</span><span class="fl">0.2</span> <span class="sc">&amp;</span> density<span class="sc">&lt;=</span><span class="fl">1.0</span>)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>Extracted <span class="ot">&lt;-</span> <span class="fu">subset</span>(DNase, Run <span class="sc">!=</span> <span class="dv">2</span> <span class="sc">&amp;</span> conc <span class="sc">&gt;</span><span class="fl">0.2</span> <span class="sc">&amp;</span> density<span class="sc">&lt;=</span><span class="fl">1.0</span>)</span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>Extracted</span></code></pre></div>
-<pre><code>##   Run     conc density
-## 5   1 0.390625   0.206
-## 6   1 0.390625   0.215</code></pre>
+<pre><code>##     Run     conc density
+## 5     1 0.390625   0.206
+## 6     1 0.390625   0.215
+## 7     1 0.781250   0.377
+## 8     1 0.781250   0.374
+## 9     1 1.562500   0.614
+## 10    1 1.562500   0.609
+## 37    3 0.390625   0.277
+## 38    3 0.390625   0.248
+## 39    3 0.781250   0.434
+## 40    3 0.781250   0.426
+## 41    3 1.562500   0.703
+## 42    3 1.562500   0.689
+## 53    4 0.390625   0.200
+## 54    4 0.390625   0.206
+## 55    4 0.781250   0.364
+## 56    4 0.781250   0.360
+## 57    4 1.562500   0.620
+## 58    4 1.562500   0.640
+## 59    4 3.125000   0.979
+## 60    4 3.125000   0.973
+## 69    5 0.390625   0.224
+## 70    5 0.390625   0.220
+## 71    5 0.781250   0.385
+## 72    5 0.781250   0.390
+## 73    5 1.562500   0.658
+## 74    5 1.562500   0.647
+## 85    6 0.390625   0.272
+## 86    6 0.390625   0.277
+## 87    6 0.781250   0.440
+## 88    6 0.781250   0.426
+## 89    6 1.562500   0.686
+## 90    6 1.562500   0.676
+## 101   7 0.390625   0.282
+## 102   7 0.390625   0.273
+## 103   7 0.781250   0.444
+## 104   7 0.781250   0.439
+## 105   7 1.562500   0.686
+## 106   7 1.562500   0.668
+## 117   8 0.390625   0.226
+## 118   8 0.390625   0.222
+## 119   8 0.781250   0.392
+## 120   8 0.781250   0.383
+## 121   8 1.562500   0.658
+## 122   8 1.562500   0.644
+## 133   9 0.390625   0.239
+## 134   9 0.390625   0.242
+## 135   9 0.781250   0.420
+## 136   9 0.781250   0.395
+## 137   9 1.562500   0.624
+## 138   9 1.562500   0.705
+## 149  10 0.390625   0.259
+## 150  10 0.390625   0.256
+## 151  10 0.781250   0.439
+## 152  10 0.781250   0.439
+## 153  10 1.562500   0.690
+## 154  10 1.562500   0.701
+## 165  11 0.390625   0.246
+## 166  11 0.390625   0.252
+## 167  11 0.781250   0.427
+## 168  11 0.781250   0.411
+## 169  11 1.562500   0.704
+## 170  11 1.562500   0.684
+## 171  11 3.125000   0.994
+## 172  11 3.125000   0.980</code></pre>
 </div>
 </div>
 
